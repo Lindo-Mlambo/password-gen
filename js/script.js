@@ -2,7 +2,7 @@ const $ = (q) => document.querySelectorAll(q);
 
 const valueSpan = $("#range-value")[0];
 const rangeInput = $("input[type='range']")[0];
-const passwordField = $("div.password-text")[0];
+const passwordField = $("input.password-text")[0];
 
 const passwordParams = {};
 const lcChars = "qwertyuiopasdfghjklzxcvbnm";
@@ -18,8 +18,17 @@ window.onload = () => {
   console.log("ready...");
 
   $("button.copy-password")[0].onclick = () => {
-    navigator.clipboard.writeText(passwordField.innerHTML);
+    let copyText = $("input.password-text")[0];
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(passwordField.value);
     alert("Password copied to clipboard!");
+  };
+
+  $("button.refresh-password")[0].onclick = () => {
+    updatePassword();
   };
 
   passwordParams.passwordLength = rangeInput.value;
@@ -51,7 +60,7 @@ const handleCheckboxChange = (evt, key) => {
 };
 
 const updatePassword = () => {
-  passwordField.innerHTML = generatePassword();
+  passwordField.value = generatePassword();
 };
 
 const generatePassword = () => {

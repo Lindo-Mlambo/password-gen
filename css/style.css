@@ -48,7 +48,7 @@ div.password-container > * {
 div.password-container > button:hover {
   cursor: pointer;
 }
-div.password-text {
+input.password-text {
   width: 272px;
   padding: 0px 8px;
   display: flex;
