@@ -19,7 +19,7 @@ window.onload = () => {
 
   $("button.copy-password")[0].onclick = () => {
     navigator.clipboard.writeText(passwordField.innerHTML);
-    alert("Copied text " + passwordField.innerHTML);
+    alert("Password copied to clipboard!");
   };
 
   passwordParams.passwordLength = rangeInput.value;
