@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <h1>Password Generator</h1>
+        <p>
+          Use the controls to generate password. Password is generated in
+          real-time as you interact with the controls
+        </p>
+        <div class="password-container">
+          <div class="password-text"></div>
+          <button class="copy-password" title="copy to clipboard">
+            <i class="fa fa-files-o"></i>
+          </button>
+          <button class="refresh-password" title="generate new password">
+            <i class="fa fa-refresh"></i>
+          </button>
+        </div>
+        <div class="controls">
+          <div class="control">
+            <input type="checkbox" id="lowercase-inp" checked />
+            <label for="lowercase-inp">Include Lowercase</label>
+          </div>
+          <div class="control">
+            <input type="checkbox" id="uppercase-inp" checked />
+            <label for="uppercase-inp">Include Uppercase</label>
+          </div>
+          <div class="control">
+            <input type="checkbox" id="numeric-inp" />
+            <label for="numeric-inp">Include Numeric</label>
+          </div>
+          <div class="control">
+            <input type="checkbox" id="special-inp" />
+            <label for="special-inp">Include Special Chars</label>
+          </div>
+          <div class="control range-control">
+            <label for="length-inp">Password Length:</label>
+            <input
+              type="range"
+              id="length-inp"
+              value="6"
+              min="6"
+              max="32"
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="6"></option>
+              <option value="12"></option>
+              <option value="18"></option>
+              <option value="24"></option>
+              <option value="30"></option>
+            </datalist>
+            (<span id="range-value"></span>)
+          </div>
+        </div>
+        <div class="footer">
+          <i>&copy; 2022. Built with love by Lindo Mlambo</i>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

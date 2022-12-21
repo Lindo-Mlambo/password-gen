@@ -1,0 +1,83 @@
+:root {
+  --light-grey: hsl(200, 55%, 89%);
+}
+body {
+  margin: 0px;
+  font-family: Outfit, sans-serif;
+  font-size: 15px;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grey);
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+}
+p {
+  text-align: center;
+  margin: 0px 8px 16px 8px;
+  color: #aaa;
+  font-size: .8rem;
+}
+
+div.card {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 16px;
+  max-width: 350px;
+}
+div.password-container {
+  display: flex;
+  align-items: center;
+}
+div.password-container > * {
+  margin: 4px;
+  border-radius: 8px;
+  height: 32px;
+  width: 32px;
+  border: 1px solid var(--light-grey);
+}
+div.password-container > button:hover {
+  cursor: pointer;
+}
+div.password-text {
+  width: 272px;
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+}
+
+div.controls {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+div.control {
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  margin-bottom: 8px;
+  width: 150px;
+}
+div.range-control {
+  width: 300px;
+  justify-content: flex-start;
+  margin-left: 4px;
+}
+div.range-control > input {
+  width: 160px;
+  margin-left: 8px;
+}
+
+.footer {
+  font-size: .6rem;
+  text-align: center;
+  color: #aaa;
+}
