@@ -65,7 +65,7 @@ div.control {
   display: flex;
   align-items: center;
   font-size: .8rem;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   width: 150px;
 }
 div.range-control {
