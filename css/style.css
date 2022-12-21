@@ -10,6 +10,7 @@ main {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--light-grey);
@@ -31,6 +32,7 @@ div.card {
   padding: 8px 16px;
   border-radius: 16px;
   max-width: 350px;
+  margin: 16px 0px;
 }
 div.password-container {
   display: flex;
@@ -76,6 +78,25 @@ div.range-control > input {
   margin-left: 8px;
 }
 
+.reach-me {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.reach-me > a {
+  margin: 0px 8px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #222;
+  border-radius: 4px;
+  padding : 0px 4px;
+  font-size: .8rem;
+  font-weight: 100;
+  transition: background-color .5s ease;
+}
+.reach-me>a:hover {
+  background-color: #444;
+}
 .footer {
   font-size: .6rem;
   text-align: center;

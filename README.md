@@ -5,6 +5,9 @@ I just have these small ideas and decide to work on the thing and... ja
 
 I am inspired by Frontend Mentor, if I am out of ideas I just go on in there and pick a challenge. It's fun 😊
 
+Feel free to use the code however you want. Infact, you should actually write a better algorithm for generating the password,
+I just patched it up and made it to work... Not so much of an algorithm really
+
 ## My Process
 
 ### Built with
@@ -12,6 +15,12 @@ I am inspired by Frontend Mentor, if I am out of ideas I just go on in there and
 - HTML5
 - CSS
 - JavaScript
+
+### Continued Delevelopment
+
+I was just thinking that the password generation part of this project makes a good candidate for TDD?
+Maybe one day when I remember that this project exists, I will come back and try build the password generator using TDD.
+I am familiar with the theory, I haven't had a chance to put it to practice but I am looking forward to it
 
 ## Author
 
