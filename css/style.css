@@ -5,6 +5,7 @@ body {
   margin: 0px;
   font-family: Outfit, sans-serif;
   font-size: 15px;
+  overflow: hidden;
 }
 main {
   width: 100vw;
@@ -14,6 +15,7 @@ main {
   align-items: center;
   justify-content: center;
   background-color: var(--light-grey);
+  overflow: hidden;
 }
 
 h1 {
