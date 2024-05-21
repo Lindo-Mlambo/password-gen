@@ -1,4 +1,5 @@
-const $ = (q) => document.querySelectorAll(q);
+const $ = (q, multipleElements = true) =>
+  multipleElements ? document.querySelectorAll(q) : document.querySelector(q);
 
 const valueSpan = $("#range-value")[0];
 const rangeInput = $("input[type='range']")[0];
@@ -55,8 +56,21 @@ window.onload = () => {
 };
 
 const handleCheckboxChange = (evt, key) => {
+  visualizeFeedback();
   passwordParams[key] = evt.target.checked;
   updatePassword();
+};
+
+const visualizeFeedback = () => {
+  const characterGroupControlsDiv = $("div.character-group-controls", false);
+  const feedbackDiv = $("div.feedback", false);
+  if ($("div.character-group-controls input:checked").length > 0) {
+    feedbackDiv.classList.remove("show");
+    characterGroupControlsDiv.style.borderColor = "var(--light-grey)";
+  } else {
+    feedbackDiv.classList.add("show");
+    characterGroupControlsDiv.style.borderColor = "var(--red)";
+  }
 };
 
 const updatePassword = () => {
