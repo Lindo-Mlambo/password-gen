@@ -1,5 +1,6 @@
 :root {
   --light-grey: hsl(200, 55%, 89%);
+  --red: #FF0024;
 }
 body {
   margin: 0px;
@@ -38,10 +39,9 @@ div.card {
 }
 div.password-container {
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
 }
 div.password-container > * {
-  margin: 4px;
   border-radius: 8px;
   height: 32px;
   width: 32px;
@@ -51,10 +51,24 @@ div.password-container > button:hover {
   cursor: pointer;
 }
 input.password-text {
-  width: 272px;
+  width: 250px;
   padding: 0px 8px;
-  display: flex;
-  align-items: center;
+}
+div.feedback {
+  width: fit-content;
+  padding: 0 1em;
+  font-size: .8em;
+  color: var(--red);
+  overflow: hidden;
+  opacity: 0;
+  translate: 0 -1em;
+  transition: translate .4s, opacity .1s;
+}
+div.feedback.show {
+  opacity: 1;
+  translate: 0 0;
+  transition: translate .1s, opacity .4s;
+  pointer-events: none;
 }
 
 div.controls {
@@ -62,6 +76,13 @@ div.controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+div.character-group-controls {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: .5em;
+  border: 1px solid var(--light-grey);
+  padding-top: .5em;
 }
 div.control {
   display: flex;

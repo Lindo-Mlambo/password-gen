@@ -8,6 +8,8 @@ I am inspired by Frontend Mentor, if I am out of ideas I just go on in there and
 Feel free to use the code however you want. Infact, you should actually write a better algorithm for generating the password,
 I just patched it up and made it to work... Not so much of an algorithm really
 
+You can play with it here [Password Gen](https://lindo-mlambo.github.io/password-gen)
+
 ## My Process
 
 ### Built with
